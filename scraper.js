@@ -16,8 +16,8 @@ import chalk from 'chalk';
     await page.goto(`https://www.halkyatirim.com.tr/skorkart/${json[i].Hisse}`);
     await page.waitForSelector('#TBLTEMELANALIZ > tbody > tr > td')
 
-    const myValueLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-right, #TBLPIYASADEGER> tbody > tr > td.dt-right ))
-    const myKeyLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-left, #TBLPIYASADEGER> tbody > tr > td.dt-left))
+    const myValueLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-right, #TBLPIYASADEGER> tbody > tr > td.dt-right' ))
+    const myKeyLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-left, #TBLPIYASADEGER> tbody > tr > td.dt-left'))
 
     
     var keys = ["Hisse"]
