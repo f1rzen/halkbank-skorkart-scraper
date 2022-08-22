@@ -16,8 +16,8 @@ import chalk from 'chalk';
     await page.goto(`https://www.halkyatirim.com.tr/skorkart/${json[i].Hisse}`);
     await page.waitForSelector('#TBLTEMELANALIZ > tbody > tr > td')
 
-    const myValueLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-right, #TBLPIYASADEGER> tbody > tr > td.dt-right, #TBLFIYATPERFORMANSI > tbody > tr > td.dt-right'))
-    const myKeyLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-left, #TBLPIYASADEGER> tbody > tr > td.dt-left, #TBLFIYATPERFORMANSI > tbody > tr > td.dt-left'))
+    const myValueLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-right, #TBLPIYASADEGER> tbody > tr > td.dt-right ))
+    const myKeyLink = (await page.$$('#TBLTEMELANALIZ > tbody > tr > td.dt-left, #TBLPIYASADEGER> tbody > tr > td.dt-left))
 
     
     var keys = ["Hisse"]
@@ -48,7 +48,7 @@ import chalk from 'chalk';
     
    
     
-   await fs.appendFile('./blank.json', "\n" + JSON.stringify(jsonParse), function (err) {
+   await fs.appendFile('./skorkartVeriler.json', "\n" + JSON.stringify(jsonParse), function (err) {
     if (err) throw err;
    
   });
